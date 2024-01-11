@@ -31,8 +31,7 @@ const navLinks = [
                 <div class="inline-flex relative bg-inherit">
                     <NuxtLink to="/" class=" flex items-center gap-2">
                         <span class="flex">
-                            <span class="w-3 h-6 rounded-l-full flex bg-primary"></span>
-                            <span class="w-3 h-6 rounded-r-full flex bg-[#f88fc2] mt-2"></span>
+                            <img src="/logo.png" alt="logo" width="25" />
                         </span>
                         <span class="text-lg text-gray-700 dark:text-white">Iroun</span>
                     </NuxtLink>

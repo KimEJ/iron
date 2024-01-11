@@ -5,8 +5,7 @@
                 <div class="col-span-2 md:col-span-4 lg:col-span-2">
                     <NuxtLink to="/" class=" flex items-center gap-2">
                         <span class="flex">
-                            <span class="w-3 h-6 rounded-l-full flex bg-primary"></span>
-                            <span class="w-3 h-6 rounded-r-full flex bg-[#f88fc2] mt-2"></span>
+                            <img src="/logo.png" alt="logo" width="30" />
                         </span>
                         <span class="text-xl font-bold text-gray-700 dark:text-white">Iroun</span>
                     </NuxtLink>
