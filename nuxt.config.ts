@@ -3,6 +3,11 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/color-mode',
         '@nuxt/image',
+        '@nuxt/content',
+        'nuxt-icon',
+        'nuxt-og-image',
+        'nuxt-simple-sitemap',
+
     ],
     css:[
         '~/assets/css/app.css'
