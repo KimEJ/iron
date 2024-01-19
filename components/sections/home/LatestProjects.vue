@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts" setup>
-const { data } = await useAsyncData('home', () => queryContent('/projects').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('home', () => queryContent('/archive').sort({ _id: -1 }).find())
 
 const nextIsVisible = useState('nextIsVisible', () => false)
 const prevIsVisible = useState('prevIsVisible', () => false)

@@ -19,7 +19,7 @@
             <!-- <span class="px-2 py-1 rounded-md bg-gray-100 dark:bg-body text-primary ">New season
                           available</span> -->
             <h1 class="text-gray-800 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-              지난 프로젝트
+              진행중 프로젝트
             </h1>
           </div>
 

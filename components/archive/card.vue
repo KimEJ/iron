@@ -13,7 +13,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  path: '/',
+  path: '#',
   title: '프로젝트를 찾을 수 없습니다.',
   date: '',
   description: '프로젝트가 존재하지 않습니다. 다른 프로젝트를 찾아보세요.',
@@ -60,8 +60,7 @@ withDefaults(defineProps<Props>(), {
           </div>
         </div>
         <div class="flex group-hover:underline text-sky-700 dark:text-sky-400 items-center pt-2">
-          <p v-if="empty==true">홈으로 돌아가기</p>
-          <p v-else>자세히</p>
+          <p v-if="empty==false">자세히</p>
           <LogoArrow />
         </div>
       </div>

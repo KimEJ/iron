@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const { data } = await useAsyncData('home', () => queryContent('projects').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('home', () => queryContent('archive').sort({ _id: -1 }).find())
 
 const elementPerPage = ref(5)
 const pageNumber = ref(1)
 const searchTest = ref('')
 
-const formattedData = computed(() => {
+const formattedData = computed(() => {   
   return data.value?.map((articles) => {
     return {
       path: articles._path,
@@ -58,7 +58,7 @@ function onNextPageClick() {
 }
 
 useHead({
-  title: 'Projects',
+  title: 'Arcive',
   meta: [
     {
       name: 'description',
@@ -72,7 +72,7 @@ useHead({
 
 <template>
   <main class="container max-w-5xl mx-auto text-zinc-600">
-    <ProjectsHero />
+    <ArchiveHero />
 
     <div class="px-6 pt-5">
 
@@ -94,8 +94,8 @@ useHead({
 
       <template #fallback>
         <!-- this will be rendered on server side -->
-        <ProjectsLoader />
-        <ProjectsLoader />
+        <ArchiveLoader />
+        <ArchiveLoader />
       </template>
     </ClientOnly>
 

@@ -14,7 +14,17 @@ const navLinks = [
     },
     {
         text: "프로젝트",
-        href: "/projects"
+        href: undefined,
+        child: [
+            {
+                text: "진행중 프로젝트",
+                href: "/projects"
+            },
+            {
+                text: "지난 프로젝트",
+                href: "/archive"
+            },
+        ]
     },
     {
         text: "팀 소개",
@@ -44,7 +54,7 @@ const navLinks = [
                     transition-all duration-300 ease-linear origin-top translate-y-6 lg:translate-y-0"
                     :class="navIsOpen?'!visible !opacity-100 !translate-y-0':''">
                     <ul class="text-gray-700 dark:text-gray-100 w-full flex lg:items-center gap-y-4 lg:gap-x-8 flex-col lg:flex-row">
-                        <AtomsNavLink v-for="navItem in navLinks" :href="navItem.href" :text="navItem.text" />
+                        <AtomsNavLink v-for="navItem in navLinks" :href="navItem.href" :text="navItem.text" :child="navItem.child" />
                     </ul>
                 </div>
 
