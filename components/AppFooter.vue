@@ -15,8 +15,12 @@
                     </p>
                 </div>
 
+                <div class="col-span-2">
+
+                </div>
+
                 <BlocksFooterNavBlock title="바로가기" :links="quickLinks" />
-                <BlocksFooterNavBlock title="자료" :links="ressourcesLinks" />
+                <!-- <BlocksFooterNavBlock title="자료" :links="ressourcesLinks" /> -->
                 <BlocksFooterNavBlock title="지원" :links="supportLinks" />
                 <!-- <BlocksFooterNavBlock title="Enterprise" :links="quickLinks" /> -->
             </div>
@@ -61,8 +65,8 @@ const quickLinks = [
         text: "팀 소개"
     },
     {
-        href: "#",
-        text: "소식지"
+        href: "/projects",
+        text: "프로젝트"
     },
     {
         href: "#",
