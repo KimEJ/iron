@@ -28,7 +28,7 @@ const navLinks = [
     },
     {
         text: "팀 소개",
-        href: "/"
+        href: "/teams"
     },
 ]
 
