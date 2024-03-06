@@ -24,16 +24,16 @@
                             아주 작은 일이라도 괜찮습니다. 저희와 같이 이룸이가 되어주세요.
                         </p>
                         <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
-                            <div
+                            <!-- <div
                                 v-for="card in cards"
                                 class="text-center rounded-xl bg-box-bg shadow-lg shadow-box-shadow border border-box-border p-3">
                                 <h3 class="text-gray-800 dark:text-white font-bold text-xl sm:text-2xl lg:text-3xl">+ {{ card.count }}
                                 </h3>
                                 <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">{{ card.title }}</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="pt-10 flex">
-                            <AtomsLinkBtn href="#" variant="primary">
+                            <AtomsLinkBtn href="/projects/2024-03-06" variant="primary">
                                 이룸이가 되기
                             </AtomsLinkBtn>
                         </div>

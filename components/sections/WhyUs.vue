@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-20 md:pt-24">
+    <section class="pb-20 md:pt-24">
         <AtomsContainer>
             <div class="grid md:grid-cols-2 gap-10 xl:gap-14 relative">
                 <div class="md:py-2 lg:py-4 relative">
@@ -28,11 +28,6 @@
                                 <h3 class="text-gray-700 dark:text-gray-200 font-semibold text-xl">Last and feasible topics</h3>
                                 <p class="text-base text-gray-600 dark:text-gray-300">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                        </div>
-                        <div class="pt-10 flex">
-                            <AtomsLinkBtn href="#" variant="primary">
-                                Start Listning
-                            </AtomsLinkBtn>
                         </div>
                     </div>
                 </div>

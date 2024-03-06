@@ -14,7 +14,9 @@ const title = ref('')
 </script>
 <template>
     <div>
+      <sectionsTeamsHeroSection/>
       <sectionsTeamsPeoples @selected="(el: string) => title = el"/>
       <sectionsTeamsInterview :title="title"/>
+      <!-- <SectionsWhyUs/> -->
     </div>
 </template>

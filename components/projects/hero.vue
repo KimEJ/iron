@@ -24,12 +24,7 @@
           </div>
 
           <p class="text-gray-600 dark:text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptate, quibusdam cumque, voluptatum, quod voluptas quia
-            exercitationem quas quos doloribus quae. Quisquam voluptate, quibusdam
-            cumque, voluptatum, quod voluptas quia exercitationem quas quos
-            doloribus quae.
+            이로운에서는 현재 아래 프로그램들을 진행중입니다.
           </p>
 
           <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">

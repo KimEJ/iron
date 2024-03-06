@@ -3,7 +3,7 @@
         <AtomsContainer>
             <div class="flex justify-between items-center pb-6">
                 <div class="">
-                    <AtomsTitle texte="이룸이" />
+                    <AtomsTitle texte="함께하는 이룸이들" />
                 </div>
             </div>
             <div class="relative">
@@ -26,7 +26,7 @@
                     <div v-for="post in recentData" :key="post.title"
                         class=" w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]">
                         <CardsPeople :title='post.title' :description="post.description" :timestamp='post.timestamp'
-                            :href='post.href' :cover-image='post.coverImage' @click="$emit('selected', data[0]._title)"/>
+                            :href='post.href ?? ""' :cover-image='post.coverImage' @click="$emit('selected', data[0]._title)"/>
                     </div>
                 </div>
             </div>

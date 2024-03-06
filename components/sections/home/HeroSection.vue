@@ -54,7 +54,7 @@
                             </div>
                         </AtomsLinkBtn> -->
                     </div>
-                    <div class="pt-8 lg:pt-10 w-max mx-auto lg:mx-0">
+                    <!-- <div class="pt-8 lg:pt-10 w-max mx-auto lg:mx-0">
                         <div class="flex items-center text-center flex-col sm:flex-row gap-4 sm:gap-0">
                             <div class="flex items-center">
                                 <img src="/images/people/cat-1455468_640.jpg" width="40" alt="avatar"
@@ -71,10 +71,10 @@
                                 </span>
                             </div>
                             <div class="pl-2 text-gray-600 dark:text-gray-200">
-                                명의 이룸이들이 함께하고 있습니다. <a href="#" class="text-primary">더 알아보기</a>
+                                명의 이룸이들이 함께하고 있습니다. <a href="/teams" class="text-primary">더 알아보기</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="lg:h-full  hidden md:flex">
 

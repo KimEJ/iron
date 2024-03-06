@@ -6,6 +6,9 @@
             <h1 class="text-white font-semibold text-2xl line-clamp-2">
                 {{ title }}
             </h1>
+            <p class="text-gray-400 text-xs sm:text-sm line-clamp-2">
+                {{ description }}
+            </p>
         </div>
     </button>
 </template>

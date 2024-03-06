@@ -53,7 +53,9 @@ const navLinks = [
                     lg:bg-transparent w-full lg:w-max py-6 lg:py-0 lg:visible lg:relative flex 
                     transition-all duration-300 ease-linear origin-top translate-y-6 lg:translate-y-0"
                     :class="navIsOpen?'!visible !opacity-100 !translate-y-0':''">
-                    <ul class="text-gray-700 dark:text-gray-100 w-full flex lg:items-center gap-y-4 lg:gap-x-8 flex-col lg:flex-row">
+                    <ul
+                        class="text-gray-700 dark:text-gray-100 w-full 
+                        flex lg:items-center gap-y-4 lg:gap-x-8 flex-col lg:flex-row">
                         <AtomsNavLink v-for="navItem in navLinks" :href="navItem.href" :text="navItem.text" :child="navItem.child" />
                     </ul>
                 </div>
@@ -65,36 +67,6 @@ const navLinks = [
                         </AtomsLinkBtn> -->
                         <ElementsThemeSwitcher />
                     </div>
-
-                    <!-- <div class="flex lg:hidden items-center">
-                        <ElementsDropDown>
-                            <template #trigger>
-                                <button
-                                    class="outline-none bg-transparent p-2.5 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </button>
-                            </template>
-                            <template #content>
-                                <ul class="flex flex-col">
-                                    <li
-                                        class="flex select-none cursor-pointer items-center gap-3 px-2 py-2 rounded-md transition hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-200">
-                                        <ElementsThemeSwitcher />
-                                    </li>
-
-                                    <li
-                                        class="flex select-none cursor-pointer items-center gap-3 px-2 py-2 rounded-md transition hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-200">
-                                        <NuxtLink to="#">
-                                            재능 등록하기
-                                        </NuxtLink>
-                                    </li>
-                                </ul>
-                            </template>
-                        </ElementsDropDown>
-                    </div> -->
 
                     <div class="flex lg:hidden border-l border-box-border pl-2">
                         <button @click="toggleNav" class="outline-none w-7 h-auto flex flex-col relative">

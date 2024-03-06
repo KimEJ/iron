@@ -21,7 +21,7 @@
             {{ text }}
         </NuxtLink>
         
-        <ul v-if="child" class="inline-flex lg:hidden lg:top-full lg:absolute lg:group-hover:inline-flex">
+        <ul v-if="child" class="inline-flex lg:hidden lg:top-full lg:absolute lg:group-hover:inline-flex dark:bg-body">
             <li v-for="childItem in child" class="lg:inline-flex">
                 <NuxtLink class="lg:inline-flex transition hover:text-primary ease-linear text-lg" :to="childItem.href">
                     {{ childItem.text }}

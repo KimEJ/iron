@@ -14,7 +14,8 @@ useHead({
         <SectionsHomeHeroSection/>
         <SectionsAboutIroun/>
         <!-- <SectionsWhyUs/> -->
-        <SectionsHomeLatestProjects/>
+        <SectionsHomeOngoingProjects/>
+        <!-- <SectionsHomeLatestProjects/> -->
         <!-- <SectionsHomePopularPodcasts/> -->
         <SectionsCallToAction/>
     </div>

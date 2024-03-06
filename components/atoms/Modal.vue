@@ -5,10 +5,10 @@
 
     <div class="modal-wrap" v-show="modalCheck" @click="modalClose">
       <div class="modal-container" @click.stop="">
-        <div class="py-5">
+        <div>
           <AtomsTitle :texte="title" />
         </div>
-        <hr />
+        <hr/>
         <slot />
       </div>
     </div>
@@ -33,7 +33,16 @@ function modalClose() {
 
 </script>
 
-<style>
+<style >
+hr {
+  border: 1px solid #eaeaea;
+  margin: 1rem 0 !important;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 !important;
+}
 /* dimmed */
 .modal-wrap {
   position: fixed;
@@ -49,7 +58,7 @@ function modalClose() {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 550px;
+  width: 700px;
   background: #fff;
   border-radius: 10px;
   padding: 20px;

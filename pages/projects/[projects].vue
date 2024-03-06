@@ -139,14 +139,15 @@ defineOgImageComponent('Test', {
             <p>No content found.</p>
           </template>
         </ContentRenderer>
-        <div class="text-center">
-          <!-- {{ articles?.body?.toc }} -->
-          <AtomsModal class="py-10" title="프로젝트 참여하기">
-            <ProjectsForm v-if="questions" :questions="questions" />
-          </AtomsModal>
-        </div>
       </div>
     </div>
     <ProjectsToc />
   </div>
+
+  <div class="text-center">
+          <!-- {{ articles?.body?.toc }} -->
+          <AtomsModal class="py-10" title="프로젝트 참여하기">
+            <ProjectsForm v-if="questions" :questions="questions" :title="data.title" />
+          </AtomsModal>
+        </div>
 </template>

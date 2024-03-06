@@ -34,7 +34,7 @@ const data = computed<BlogPost>(() => {
 
 </script>
 <template>
-  <div v-if="articles" class="p-6 container rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-body-color max-w-5xl mx-auto my-5 sm:grid grid-cols-12 gap-x-12 ">
+  <div v-auto-animate v-if="articles" class="p-6 container rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-body-color max-w-5xl mx-auto my-5 sm:grid grid-cols-12 gap-x-12 ">
     <div class="col-span-12 lg:col-span-3">
       <NuxtImg
         :src="data.image"
@@ -43,12 +43,20 @@ const data = computed<BlogPost>(() => {
         class="m-auto rounded-2xl shadow-lg content-center object-cover"
       />
     </div>
-    <div class="col-span-12 lg:col-span-9 prose">
-        <ContentRenderer :value="articles">
-          <template #empty>
-            <p>No content found.</p>
-          </template>
-        </ContentRenderer>
+    <div class="col-span-12 lg:col-span-9 prose dark:prose-invert">
+
+      <h1 class="text-xl dark:text-zinc-300 md:text-3xl lg:text-4xl m-7 font-bold text-center">
+        {{ data.title || '' }}
+      </h1>
+
+      <p class="text-xs sm:text-sm my-3 max-w-xl mx-auto text-center text-zinc-600 dark:text-zinc-400">
+        {{ data.description }}
+      </p>
+      <ContentRenderer :value="articles">
+        <template #empty>
+          <p>No content found.</p>
+        </template>
+      </ContentRenderer>
     </div>
   </div>
   <div v-else class="m-6"></div>

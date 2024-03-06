@@ -6,12 +6,12 @@
         </span>
         <div
             class="absolute py-2 px-3 md:py-3 md:px-4 bottom-0 h-28 flex flex-col justify-between inset-x-0 bg-gradient-to-t from-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm">
-            <h2 class="text-white font-semibold text-sm sm:text-base line-clamp-2">
+            <h2 class="text-white font-semibold text-sm sm:text-base">
                 {{ title }}
             </h2>
-            <p class="text-gray-400 text-xs sm:text-sm line-clamp-2">
+            <!-- <p class="text-gray-400 text-xs sm:text-sm line-clamp-2">
                 {{ description }}
-            </p>
+            </p> -->
             <div class="pt-2">
                 <NuxtLink :to="href"
                     class="flex items-center text-white rounded-full p-0.5 pr-2 gap-2 text-sm border border-gray-100/20 w-max">

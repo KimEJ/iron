@@ -73,8 +73,8 @@ const quickLinks = [
         text: "후원하기"
     },
     {
-        href: "#",
-        text: "재능 등록하기"
+        href: "/projects/2024-03-06",
+        text: "이룸이가 되기"
     }
 ]
 const ressourcesLinks = [

@@ -3,11 +3,11 @@
         <AtomsContainer>
             <div class="flex justify-between items-center pb-6">
                 <div class="">
-                    <AtomsTitle texte="지난 프로젝트" />
+                    <AtomsTitle texte="진행중인 프로젝트" />
                 </div>
                 <div class="flex items-center min-w-max relative">
-                    <AtomsLinkBtn href="/projects" variant="primary">
-                        더 많은 프로젝트 보기
+                    <AtomsLinkBtn href="/archive" variant="primary">
+                        지난 프로젝트 보기
                     </AtomsLinkBtn>
                 </div>
             </div>
@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts" setup>
-const { data } = await useAsyncData('home', () => queryContent('/archive').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('home', () => queryContent('/projects').sort({ _id: -1 }).find())
 
 const nextIsVisible = useState('nextIsVisible', () => false)
 const prevIsVisible = useState('prevIsVisible', () => false)

@@ -1,3 +1,23 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import type { DocumentData } from 'firebase/firestore';
+import { useRouter } from 'vue-router'
+
+const email = ref('')
+
+async function addMailingList() {
+    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value))
+        return alert('이메일 형식이 올바르지 않습니다.');
+    // if ((await getFirestoreDoc('mailing-list', email.value )))
+    //     return alert('이미 구독중인 이메일입니다.');
+    await setFirestoreData('mailing-list', {
+        createdAt: new Date().toISOString(),
+    }, email.value);
+    alert('구독 신청이 완료되었습니다.');
+    email.value = '';
+}
+</script>
+
 <template>
     <section class="py-20">
         <AtomsContainer>
@@ -24,12 +44,12 @@
                         이로운의 소식을 구독하시면, 이로운의 소식을 가장 먼저 받아보실 수 있습니다.
                     </p>
                     <div class="mx-auto max-w-md sm:max-w-xl pt-10">
-                        <form action="" class="flex items-center relative gap-x-2">
-                            <input type="email" placeholder="gildong@gmail.com"
+                        <div class="flex items-center relative gap-x-2">
+                            <input type="email" placeholder="gildong@gmail.com" v-model="email"
                                 class="outline-none border-2 border-transparent focus:border-primary bg-body text-gray-600 dark:text-gray-200 rounded-3xl px-6 py-3 w-full">
                             <div
                                 class="sm:inline-flex sm:min-w-max absolute sm:relative top-0.5 right-0.5 sm:top-0 sm:right-0">
-                                <button
+                                <button @click="addMailingList"
                                     class="min-w-max p-3 sm:py-3 sm:px-6 text-white border-2 border-transparent relative group">
                                     <span
                                         class="absolute inset-0 rounded-full group-hover:scale-105 origin-center transition-all ease-in-out bg-primary"></span>
@@ -45,7 +65,7 @@
                                     </span>
                                 </button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
