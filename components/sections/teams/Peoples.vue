@@ -20,13 +20,12 @@
                         <IconsNextIco />
                     </AtomsSwiperNavButton>
                 </div>
-
                 <div data-slide-recent @scroll="initScroll()"
                     class="flex items-stretch gap-5 overflow-hidden overflow-x-auto invisible-scroll">
-                    <div v-for="post in recentData" :key="post.title"
+                    <div v-for="(post, index) in recentData" :key="post.title"
                         class=" w-11/12 min-w-[91.666667%] xs:w-80 xs:min-w-[20rem] md:w-1/3 md:min-w-[33.333333%] lg:w-1/4 lg:min-w-[25%]">
                         <CardsPeople :title='post.title' :description="post.description" :timestamp='post.timestamp'
-                            :href='post.href ?? ""' :cover-image='post.coverImage' @click="$emit('selected', data[0]._title)"/>
+                            :href='post.href ?? ""' :cover-image='post.coverImage' @click="$emit('selected', data && data[index].title)"/>
                     </div>
                 </div>
             </div>
@@ -35,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-const { data } = await useAsyncData('home', () => queryContent('/people').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('home', () => queryContent('/people').sort({ _id: 1 }).find())
 
 const nextIsVisible = useState('nextIsVisible', () => false)
 const prevIsVisible = useState('prevIsVisible', () => false)
